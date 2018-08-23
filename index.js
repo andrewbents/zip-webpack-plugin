@@ -81,6 +81,7 @@ ZipPlugin.prototype.apply = function(compiler) {
 				outputPathAndFilename
 			);
 
+			compilation.assets = {};
 			// add our zip file to the assets
 			compilation.assets[relativeOutputPath] = new RawSource(Buffer.concat(bufs));
 
